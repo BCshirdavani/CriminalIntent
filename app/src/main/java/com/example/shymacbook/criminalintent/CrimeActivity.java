@@ -27,13 +27,6 @@ public class CrimeActivity extends SingleFragmentActivity {
 //    }
 
     // NEW METHOD - pp.164
-
-
-    @Override
-    public View onCreateView(String name, Context context, AttributeSet attrs) {
-        return super.onCreateView(name, context, attrs);
-    }
-
     @Override
     protected Fragment createFragment() {
         return new CrimeFragment();
