@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
  * Created by shymacbook on 2/26/18.
  */
 
+
 public abstract class SingleFragmentActivity extends AppCompatActivity {
 
     protected abstract Fragment createFragment();
@@ -21,10 +22,34 @@ public abstract class SingleFragmentActivity extends AppCompatActivity {
         FragmentManager fm = getSupportFragmentManager();
         Fragment fragment = fm.findFragmentById(R.id.fragment_container);
 
-        if (fragment == null){
+        if (fragment == null) {
             fragment = createFragment();
-            fm.beginTransaction().add(R.id.fragment_container, fragment).commit();
+            fm.beginTransaction()
+                    .add(R.id.fragment_container, fragment)
+                    .commit();
         }
     }
-
 }
+
+
+
+
+//public abstract class SingleFragmentActivity extends AppCompatActivity {
+//
+//    protected abstract Fragment createFragment();
+//
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_fragment);
+//
+//        FragmentManager fm = getSupportFragmentManager();
+//        Fragment fragment = fm.findFragmentById(R.id.fragment_container);
+//
+//        if (fragment == null){
+//            fragment = createFragment();
+//            fm.beginTransaction().add(R.id.fragment_container, fragment).commit();
+//        }
+//    }
+//
+//}
