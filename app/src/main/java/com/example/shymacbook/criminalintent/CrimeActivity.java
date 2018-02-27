@@ -11,22 +11,22 @@ import android.view.View;
 
 import android.support.v4.app.Fragment;
 
-public class CrimeActivity extends SingleFragmentActivity {
-
-    @Override
-    protected Fragment createFragment() {
-        return new CrimeFragment();
-    }
-}
-
-
-
-
 //public class CrimeActivity extends SingleFragmentActivity {
 //
-//    // NEW METHOD - pp.164
 //    @Override
 //    protected Fragment createFragment() {
 //        return new CrimeFragment();
 //    }
 //}
+
+
+
+
+public class CrimeActivity extends SingleFragmentActivity {
+
+    // NEW METHOD - pp.164
+    @Override
+    protected Fragment createFragment() {
+        return new CrimeFragment();
+    }
+}
